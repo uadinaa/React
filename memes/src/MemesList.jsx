@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MemeCard from "./MemesCard.jsx";
 import "./MemesList.css";
 import { FaSearch } from "react-icons/fa";
@@ -8,6 +8,13 @@ export default function MemeList() {
     const [randomMeme, setRandomMeme] = useState([]);
     const [mode, setMode] = useState("none");
     const [search, setSearch] = useState("");
+    const [count, setCount] = useState(0);
+
+    const resetMemes = () => {
+        setRandomMeme([]);
+        setSearch("");
+        setMode("none");
+    };
 
     const fetchMemes = async () => {
         try {
@@ -27,17 +34,26 @@ export default function MemeList() {
         const random = memes[Math.floor(Math.random() * memes.length)];
         setRandomMeme(prev => [...prev, random]);
         setMode("random");
-    };
-
-    const resetMemes = () => {
-        setRandomMeme([]);
-        setSearch("");
-        setMode("none");
+        setCount((prev) => prev + 1);
     };
 
     const filteredMemes = memes.filter(m =>
         m.name?.toLowerCase().includes(search.toLowerCase())
     );
+
+    const evenCount = filteredMemes.filter(m => Number(m.id) % 2 === 0).length;
+    const oddCount  = filteredMemes.length - evenCount;
+
+    useEffect(() => {
+        if (mode !== "random") return;
+        console.log(`You fetched random meme ${count} times`);
+    }, [count]);
+
+    useEffect(() => {
+        if (mode !== "all") return; // only when showing the list
+        const q = search ? `“${search}”` : "total";
+        console.log(`${filteredMemes.length} matches — ${q} (${evenCount} even, ${oddCount} odd)`);
+    }, [mode, search, filteredMemes.length, evenCount, oddCount]);
 
     return (
         <div className="memeList">
