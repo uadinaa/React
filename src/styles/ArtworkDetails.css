@@ -1,0 +1,43 @@
+.artwork-details {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center; }
+
+
+.painting {
+    width: 100%;
+    max-width: 620px;
+    border-radius: 14px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 16px rgba(166, 38, 38, 0.15);
+    transition: transform 0.3s ease;
+}
+.painting:hover {
+    transform: scale(1.02);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    color: rgba(244, 6, 6, 0.8);
+    border: 1px solid rgba(244, 6, 6, 0.45);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.back-button:hover {
+    background-color: #fbeeee;
+    border-color: rgba(227, 4, 4, 0.7);
+    transform: translateY(-2px);
+}
+
+.back-button .icon {
+    font-size: 1.2rem;
+}
+

@@ -1,0 +1,45 @@
+.welcoming{
+    color: #555;
+}
+
+.pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px auto 12px;
+    padding: 12px 0;
+}
+
+.pager button {
+    background-color: #f6f6f6;
+    border: 1px solid rgba(244, 6, 6, 0.45);
+    color: rgba(244, 6, 6, 0.8);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 6px 8px;
+    min-width: 90px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.pager button:hover:not(:disabled) {
+    background-color: rgba(244, 6, 6, 0.1);
+    transform: translateY(-1px);
+}
+
+.pager button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pager span {
+    font-size: 0.98rem;
+    color: #333;
+    padding: 0 8px;
+    min-width: 120px;
+    text-align: center;
+}
+
