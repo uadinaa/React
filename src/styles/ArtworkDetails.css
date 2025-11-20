@@ -17,6 +17,12 @@
     transform: scale(1.02);
 }
 
+.artist{
+    color: rgba(244, 6, 6, 0.8);
+    font-size: 1.5rem;
+}
+
+
 .back-button {
     display: flex;
     align-items: center;

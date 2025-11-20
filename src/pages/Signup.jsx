@@ -1,21 +1,20 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/Login.css"
+import "../styles/Signup.css"
 
-
-export default function Login() {
+export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
         try {
             setError("");
-            await signInWithEmailAndPassword(auth, email, password);
+            await createUserWithEmailAndPassword(auth, email, password);
             navigate("/profile");
         } catch (err) {
             setError(err.message);
@@ -23,10 +22,10 @@ export default function Login() {
     };
 
     return (
-        <div className="login">
-            <h2>Login</h2>
+        <div className="signup">
+            <h2>Signup</h2>
             {error && <p style={{ color: "red" }}>{error}</p>}
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSignup}>
                 <input
                     type="email"
                     placeholder="Email"
@@ -41,10 +40,10 @@ export default function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <button type="submit">Login</button>
+                <button type="submit">Signup</button>
             </form>
 
-            <p>Don’t have an account? <Link to="/signup">Signup</Link></p>
+            <p>Already have an account? <Link to="/login">Login</Link></p>
         </div>
     );
 }
