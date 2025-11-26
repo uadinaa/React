@@ -6,6 +6,7 @@ const firebaseConfig = {
     authDomain: "routing-cdfaf.firebaseapp.com",
     projectId: "routing-cdfaf",
     storageBucket: "routing-cdfaf.firebaseapp.com",  // FIXED
+    // storageBucket: "routing-cdfaf.appspot.com",
     messagingSenderId: "1002624693462",
     appId: "1:1002624693462:web:4108d8764130e5b0e80577",
     measurementId: "G-ESYG7JGY7R"
