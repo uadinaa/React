@@ -25,7 +25,6 @@ export async function fetchArtworks({ page = 1, limit = 20, query = '' }) {
     return res.json(); // { data, pagination, config }
 }
 
-
 export async function getById(id) {
     const res = await fetch(`https://api.artic.edu/api/v1/artworks/${id}`);
     const json = await res.json();

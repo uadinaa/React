@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaInfoCircle, FaImages, FaSignInAlt } from "react-icons/fa";
+import { FaInfoCircle, FaImages, FaUserCircle, FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import '../styles/Header.css';
+import { useAuth } from "../context/AuthContext.jsx";
 
 export default function Header() {
+    const { user } = useAuth();
+
     return (
         <header className="header">
             <div className="header-left">
@@ -21,9 +24,23 @@ export default function Header() {
                 <Link to="/gallery" className="header-link">
                     <FaImages className="icon" /> Gallery
                 </Link>
-                <Link to="/login" className="header-link">
-                    <FaSignInAlt className="icon" /> Login
-                </Link>
+
+                {!user && (
+                    <>
+                        <Link to="/login" className="header-link login-link">
+                            <FaSignInAlt className="icon" /> Login
+                        </Link>
+                        <Link to="/signup" className="header-link signup-link">
+                            <FaUserPlus className="icon" /> Signup
+                        </Link>
+                    </>
+                )}
+
+                {user && (
+                    <Link to="/profile" className="header-link profile-link">
+                        <FaUserCircle className="icon" /> Profile
+                    </Link>
+                )}
             </nav>
         </header>
     );

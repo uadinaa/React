@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ArtworkCard from '../components/ArtworkCard.jsx';
 import { fetchArtworks } from '../api.js';
 import "../styles/Gallery.css"
@@ -11,9 +11,9 @@ export default function Gallery({ category, query }) {
     const [iiifUrl, setIiifUrl] = React.useState('');
     const [totalPages, setTotalPages] = React.useState(1);
 
-    React.useEffect(() => { setPage(1); }, [category, query]);
+    useEffect(() => { setPage(1); }, [category, query]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const q = [query?.trim(), category?.trim()].filter(Boolean).join(' ');
         let cancelled = false;
 

@@ -9,9 +9,9 @@ export default function SearchBar() {
     // Pull the current ?q= value from url
 
     const handleSearchChange = (e) => {
-        const q = e.target.value;
-        if (q) {
-            setSearchParams({q: q});
+        const qe = e.target.value;
+        if (qe) {
+            setSearchParams({q: qe});
         }else{
             setSearchParams({});
         }
