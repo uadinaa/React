@@ -1,18 +1,99 @@
-# React + Vite
+# Star Wars Characters PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Progressive Web App (PWA) built with **React**, **Redux**, and **Firebase** that allows users to explore Star Wars characters, manage favorites, and maintain a personalized profile with authentication and profile picture upload. The app is fully offline‑capable and installable.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Authentication**
+  - Firebase Authentication (Signup, Login, Logout)
+  - Email validation, password complexity checks, repeat password validation
+  - Protected routes (`/profile`) redirect unauthenticated users to `/login`
+  - Auth state stored in Redux for reactivity
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Pages**
+  - Home 
+  - Login & Signup
+  - Characters List
+  - Character Details
+  - Favorites
+  - Profile (protected)
 
-Note: This will impact Vite dev & build performances.
+- **External API**
+  - Uses Star Wars API (SWAPI) for characters
+  - List endpoint with 20+ items
+  - Details endpoint with 7+ fields per character
 
-## Expanding the ESLint configuration
+- **Search & Filtering**
+  - Query parameters for search and filters
+  - Pagination with query parameters
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Data Layer**
+  - Services separated into:
+    - `authService.js`
+    - `favoritesService.js`
+    - `itemsService.js`
+    - `imageService.js`
+  - Each service contains only data logic and returns promises
+
+- **Hooks**
+  - Built‑in: `useState`, `useEffect`, `useMemo`, `useCallback`
+
+- **PWA & Service Worker**
+  - `manifest.json` with icons
+  - Service worker registered and active
+  - App shell cached
+  - Network‑first caching strategy
+  - Offline banner displayed when offline
+
+- **Favorites**
+  - Visitors: stored in `localStorage`, persisted across reloads
+  - Logged‑in users: stored in Firestore under UID
+  - Favorites merge on login with UI message
+
+- **Profile Picture Upload**
+  - Upload `.jpg` / `.png`
+  - Compression in Web Worker
+  - Saved to Firebase DB
+  - URL stored in Firestore
+  - Rendered in header and profile page
+ 
+- **Multi-language support**
+  - i18n (KZ, EN, RU)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Redux Toolkit, React Icons
+- **Backend / Auth:** Firebase Authentication, Firestore Database
+- **API:** SWAPI (Star Wars API)
+- **PWA:** Service Worker, manifest.json
+- **Styling:** CSS (custom Star Wars theme)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (>= 16)
+- Firebase project with Authentication, Firestore, and Storage enabled
+
+### Installation
+```bash
+# Clone repo
+git clone https://github.com/uadinaa/React.git
+cd endterm
+
+# Install dependencies
+npm install
+npm install react-router-dom
+npm install firebase 
+npm install react-redux
+npm install react-icons
+npm install dompurify
+npm install @reduxjs/toolkit
+
+# Start development server
+npm run dev
