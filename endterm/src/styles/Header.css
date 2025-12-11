@@ -1,0 +1,75 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    box-shadow: 0 0 10px #ffe81f;
+    background: #000;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header-left .home-link {
+    text-decoration: none;
+}
+
+.header-title {
+    color: #ffe81f;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #ffe81f;
+}
+
+.header-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #444;
+    vertical-align: middle;
+}
+
+.character-link,
+.favorite-link,
+.login-link,
+.signup-link,
+.profile-link {
+    margin-left: 1.2rem;
+    color: #ffe81f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.character-link:hover,
+.favorite-link:hover,
+.login-link:hover,
+.signup-link:hover,
+.profile-link:hover {
+    color: white;
+    text-shadow: 0 0 6px #ffe81f;
+}
+
+.icon {
+    margin-right: 0.4rem;
+    font-size: 1.2rem;
+}
+
+button {
+    margin-left: 0.6rem;
+    background: transparent;
+    border: 1px solid #ffe81f;
+    color: #ffe81f;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background: #ffe81f;
+    color: black;
+}

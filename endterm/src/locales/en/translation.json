@@ -1,0 +1,74 @@
+{
+  "welcome": "Welcome",
+  "Star War characters" : "Star War characters",
+  "Characters":"Characters",
+  "Favorite characters": "Favorite characters",
+  "Login": "Login",
+  "Signup": "Signup",
+  "Profile": "Profile",
+
+
+  "logout": "Logout",
+  "gender": "Gender",
+  "birthYear": "Birth year",
+  "favoritesTitle": "Your Favorites",
+  "noFavorites": "No favorites yet!",
+  "showAll": "Show all characters",
+  "showFavorites": "Show favorites",
+  "more": "More",
+
+
+  "back": "Back",
+  "birthYear": "Birth year",
+  "gender": "Gender",
+  "height": "Height",
+  "mass": "Mass",
+  "hairColor": "Hair color",
+  "skinColor": "Skin color",
+  "eyeColor": "Eye color",
+  "species": "Species",
+  "unknown": "Unknown",
+  "films": "Films",
+
+
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "loggingIn": "Logging in...",
+  "signup": "Sign up",
+  "noAccount": "Don't have an account?",
+  "or": "OR",
+  "emailSignIn": "Email sign in",
+
+
+  "profileTitle": "Your Profile",
+  "uploading": "Uploading...",
+  "uploadPhoto": "Upload Photo",
+  "email": "Email",
+  "logout": "Logout",
+  "profileUpdated": "Profile picture updated!",
+  "profileUploadFailed": "Upload failed. Please try again.",
+
+
+  "signup": "Sign up",
+  "signingUp": "Signing up...",
+  "email": "Email",
+  "password": "Password",
+  "repeatPassword": "Repeat password",
+  "invalidEmail": "Invalid email format",
+  "invalidPassword": "Password must be 8+ chars, contain a number and a special character",
+  "passwordsMustMatch": "Passwords must match",
+  "alreadyHaveAccount": "Already have an account?",
+  "login": "Login",
+  "loading": "Loading...",
+
+
+  "Go back": "Go back",
+
+
+  "homeIntro": "All the Star Wars data you've ever wanted:",
+  "homePeopleFilms": "People with their characteristics and Films that they are in.",
+  "homeSevenFilms": "From all SEVEN Star Wars films"
+
+
+}

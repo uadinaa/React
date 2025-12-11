@@ -1,0 +1,78 @@
+.character-details {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;
+    color: #e0e0e0;
+}
+
+.character-name {
+    font-size: 26px;
+    margin-bottom: 16px;
+    color: #ffe81f;
+}
+
+.birth_year,
+.gender {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.characterictic p {
+    margin: 6px 0;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+.species,
+.films {
+    margin-top: 20px;
+}
+
+.species strong,
+.films strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.species ul,
+.films ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.species li,
+.films li {
+    margin: 4px 0;
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+.back-button {
+    background: #2c2c2c;
+    border: 1px solid #555;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-button:hover {
+    background: #ffe81f;
+    color: black;
+    border-color: #ffe81f;
+}

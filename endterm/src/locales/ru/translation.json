@@ -1,0 +1,74 @@
+{
+  "welcome": "Добро пожаловать",
+  "Star War characters": "Star War персонажи",
+  "Characters":"Персонажи",
+  "Favorite characters": "Любимые персонажи",
+  "Login": "Вход",
+  "Signup": "Регистрация",
+  "Profile": "Профиль",
+
+
+  "logout": "Выйти",
+  "gender": "Пол",
+  "birthYear": "Год рождения",
+  "favoritesTitle": "Ваши избранные",
+  "noFavorites": "Избранных пока нет!",
+  "showAll": "Показать всех персонажей",
+  "showFavorites": "Показать избранные",
+  "more": "Ещё",
+
+
+  "back": "Назад",
+  "birthYear": "Год рождения",
+  "gender": "Пол",
+  "height": "Рост",
+  "mass": "Масса",
+  "hairColor": "Цвет волос",
+  "skinColor": "Цвет кожи",
+  "eyeColor": "Цвет глаз",
+  "species": "Вид",
+  "unknown": "Неизвестно",
+  "films": "Фильмы",
+
+
+  "login": "Войти",
+  "email": "Электронная почта",
+  "password": "Пароль",
+  "loggingIn": "Вход...",
+  "signup": "Регистрация",
+  "noAccount": "Нет аккаунта?",
+  "or": "ИЛИ",
+  "emailSignIn": "Вход по email",
+
+
+  "profileTitle": "Ваш профиль",
+  "uploading": "Загрузка...",
+  "uploadPhoto": "Загрузить фото",
+  "email": "Электронная почта",
+  "logout": "Выйти",
+  "profileUpdated": "Фото профиля обновлено!",
+  "profileUploadFailed": "Ошибка загрузки. Попробуйте снова.",
+
+
+  "signup": "Регистрация",
+  "signingUp": "Регистрация...",
+  "email": "Электронная почта",
+  "password": "Пароль",
+  "repeatPassword": "Повторите пароль",
+  "invalidEmail": "Неверный формат электронной почты",
+  "invalidPassword": "Пароль должен быть не менее 8 символов, содержать цифру и специальный символ",
+  "passwordsMustMatch": "Пароли должны совпадать",
+  "alreadyHaveAccount": "Уже есть аккаунт?",
+  "login": "Войти",
+  "loading": "Загрузка...",
+
+
+  "Go back": "Назад",
+
+
+  "homeIntro": "Вся информация о Звёздных войнах, которую вы когда-либо хотели:",
+  "homePeopleFilms": "Люди с их характеристиками и фильмы, в которых они участвуют.",
+  "homeSevenFilms": "Из всех СЕМИ фильмов Звёздных войн"
+
+
+}
