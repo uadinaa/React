@@ -68,7 +68,11 @@
 
   "homeIntro": "All the Star Wars data you've ever wanted:",
   "homePeopleFilms": "People with their characteristics and Films that they are in.",
-  "homeSevenFilms": "From all SEVEN Star Wars films"
+  "homeSevenFilms": "From all SEVEN Star Wars films",
 
 
+  "search paintings" : "search paintings",
+  "all species" :  "all species",
+
+  "no more": "no more characters"
 }

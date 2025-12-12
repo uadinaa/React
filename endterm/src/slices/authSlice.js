@@ -1,55 +1,5 @@
-// src/store/authSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
-import { db } from "../firebase";
 import {login, signup, logout, updateProfilePhoto} from "../services/authService.js";
-import {loadFavoritesFromFirestore, saveFavoritesToFirestore} from "../services/favoritesService.js";
-
-// export const loginUser = createAsyncThunk(
-//     "auth/loginUser",
-//     async ({ email, password }) => {
-//         const userCred = await signInWithEmailAndPassword(auth, email, password);
-//         const uid = userCred.user.uid;
-//         const emailAddr = userCred.user.email;
-//
-//         const snap = await getDoc(doc(db, "users", uid));
-//         let photoBase64 = null;
-//
-//         // if (snap.exists()) {
-//         //     const data = snap.data();
-//         //     photoBase64 = data.photoBase64 ?? null;
-//         //     if (!data.email) {
-//         //         await setDoc(doc(db, "users", uid), { email: emailAddr }, { merge: true });
-//         //     }
-//         // } else {
-//         //     await setDoc(doc(db, "users", uid), { email: emailAddr });
-//         // }
-//
-//         if (snap.exists()) photoBase64 = snap.data().photoBase64 || null;
-//         else await setDoc(doc(db, "users", uid), { email: emailAddr });
-//
-//         console.log("Firestore user doc:", snap.exists() ? snap.data() : "no doc");
-//
-//         return { uid, email: emailAddr, photoBase64 };
-//     }
-// );
-//
-// export const signUpUser = createAsyncThunk(
-//     "auth/signupUser",
-//     async ({ email, password }) => {
-//         const userCred = await createUserWithEmailAndPassword(auth, email, password);
-//         const uid = userCred.user.uid;
-//         const emailAddr = userCred.user.email;
-//         await setDoc(doc(db, "users", uid), { email: emailAddr });
-//         return { uid, email: emailAddr, photoBase64: null };
-//     }
-// );
-//
-// export const logoutUser = createAsyncThunk("auth/logoutUser", async () => {
-//     await signOut(auth);
-// });
 
 export const loginUser = createAsyncThunk(
     "auth/loginUser",
@@ -65,12 +15,12 @@ export const loginUser = createAsyncThunk(
 export const signUpUser = createAsyncThunk(
     "auth/signupUser",
     async ({ email, password }) => {
-        return await signup(email, password); // calls authService.signup
+        return await signup(email, password);
     }
 );
 
 export const logoutUser = createAsyncThunk("auth/logoutUser", async () => {
-    await logout(); // calls authService.logout
+    await logout();
 });
 
 export const uploadUserPhoto = createAsyncThunk(

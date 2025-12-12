@@ -11,20 +11,15 @@ export const getIdFromUrl = (url) => {
 export const mergeFavoritesOnLogin = createAsyncThunk(
     "items/mergeFavoritesOnLogin",
     async (uid) => {
-        // Load server favourites
         const serverFavs = await loadFavoritesFromFirestore(uid);
 
-        // Merge with local favourites
         const localFavs = JSON.parse(localStorage.getItem("favourites") || "[]");
         const merged = [...serverFavs];
         localFavs.forEach(f => {
             if (!merged.find(m => m.id === f.id)) merged.push(f);
         });
 
-        // Save merged back to Firestore
         await saveFavoritesToFirestore(uid, merged);
-
-        // Clear localStorage
         localStorage.removeItem("favourites");
 
         return merged;
@@ -147,9 +142,6 @@ const itemsSlice = createSlice({
             localStorage.setItem("deleted", JSON.stringify(state.deleted));
         },
 
-        // setFavorites: (state, action) => {
-        //     state.favourites = action.payload;
-        // },
     },
 
     extraReducers: (builder) => {

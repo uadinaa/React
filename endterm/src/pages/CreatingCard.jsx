@@ -24,13 +24,11 @@ export default function CreatingCard() {
         e.preventDefault();
 
         const id = "local-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
-
         const newCharacter = {
             ...form,
             id,
             url: null,
         };
-
         const existing = JSON.parse(localStorage.getItem("newCharacter") || "[]");
         localStorage.setItem("newCharacter", JSON.stringify([...existing, newCharacter]));
 

@@ -20,7 +20,7 @@ export default function Login() {
         if (res.meta.requestStatus === "fulfilled") {
             const uid = res.payload.uid;
             await dispatch(mergeFavoritesOnLogin(uid));
-            alert(t("favoritesMerged")); // add this key if you want to translate the alert
+            alert(t("favoritesMerged"));
             navigate("/profile");
         }
     };
@@ -58,10 +58,6 @@ export default function Login() {
                     {t("signup")}
                 </Link>
             </p>
-
-            {/*<p>{t("or")}</p>*/}
-
-            {/*<button>{t("emailSignIn")}</button>*/}
         </div>
     );
 }

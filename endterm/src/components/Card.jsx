@@ -1,15 +1,14 @@
-import React from "react";
+import React, {useCallback} from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart, AiFillHeart, AiOutlineDelete, AiFillDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavouriteAsync, toggleFavourite, deleteCharacter } from "../slices/itemsSlice.js";
 import { useTranslation } from "react-i18next";
 
-// Card.jsx
 export default function Card({ character, useAsync = false }) {
     const dispatch = useDispatch();
     const { favourites } = useSelector(state => state.items);
-
+    const { t } = useTranslation();
     const isLiked = favourites.some(f => f.id === character.id);
 
     const handleToggle = (e) => {
@@ -21,10 +20,14 @@ export default function Card({ character, useAsync = false }) {
         }
     };
 
-    const handleDelete = (e) => {
+    // const handleDelete = (e) => {
+    //     e.preventDefault();
+    //     dispatch(deleteCharacter(character.id));
+    // };
+    const handleDelete = useCallback((e) => {
         e.preventDefault();
         dispatch(deleteCharacter(character.id));
-    };
+    }, [dispatch, character.id]);
 
     return (
         <Link to={`/character/${character.id}`} className="character-card">
@@ -44,8 +47,8 @@ export default function Card({ character, useAsync = false }) {
                 </div>
 
                 <h2>{character.name}</h2>
-                <p><strong>Gender:</strong> {character.gender}</p>
-                <p><strong>Birth year:</strong> {character.birth_year}</p>
+                <p className="character-gender">{t("gender")}: {character.gender}</p>
+                <p className="character-birthYear">{t("birthYear")}: {character.birth_year}</p>
             </div>
         </Link>
     );

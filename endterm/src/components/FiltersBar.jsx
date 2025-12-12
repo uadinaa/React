@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslation} from "react-i18next";
 
 const CATEGORIES = [
     'all species',
@@ -19,6 +20,9 @@ export default function FiltersBar (
         onChangeCategory,
     }) {
 
+    const { t } = useTranslation();
+
+
     return(
         <div className="filters">
 
@@ -29,7 +33,9 @@ export default function FiltersBar (
                     onChange={e => onChangeCategory(e.target.value)}>
 
                     {CATEGORIES.map(c => (
-                        <option key={c} value={c}> {c || 'all species'} </option>
+                        <option key={c} value={c}>
+                            {c === "all species" ? t("all species") : c}
+                        </option>
                     ))}
                 </select>
             </div>

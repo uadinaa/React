@@ -35,7 +35,7 @@ export default function Profile() {
 
     const compressToBase64 = (file) =>
         new Promise((resolve, reject) => {
-            const worker = new Worker(new URL("../services/imageWorker.js", import.meta.url));
+            const worker = new Worker(new URL("../services/imageService.js", import.meta.url));
             worker.onmessage = (e) => {
                 const base64 = e.data;
                 worker.terminate();

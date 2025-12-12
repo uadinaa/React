@@ -45,6 +45,7 @@ export default function Header() {
                 </Link>
             )}
 
+            <button onClick={() => i18n.changeLanguage("kz")}>KZ</button>
             <button onClick={() => i18n.changeLanguage("ru")}>RU</button>
             <button onClick={() => i18n.changeLanguage("en")}>EN</button>
         </header>

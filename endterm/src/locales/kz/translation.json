@@ -1,0 +1,63 @@
+{
+  "welcome": "Қош келдіңіз",
+  "Star War characters": "Star War кейіпкерлері",
+  "Characters": "Кейіпкерлер",
+  "Favorite characters": "Таңдаулы кейіпкерлер",
+  "Login": "Кіру",
+  "Signup": "Тіркелу",
+  "Profile": "Профиль",
+
+  "logout": "Шығу",
+  "gender": "Жынысы",
+  "birthYear": "Туған жылы",
+  "favoritesTitle": "Сіздің таңдаулыларыңыз",
+  "noFavorites": "Таңдаулылар тізімі бос!",
+  "showAll": "Барлық кейіпкерлерді көрсету",
+  "showFavorites": "Таңдаулыларды көрсету",
+  "more": "Тағы",
+
+  "back": "Артқа",
+  "height": "Биіктігі",
+  "mass": "Салмағы",
+  "hairColor": "Шашының түсі",
+  "skinColor": "Терісінің түсі",
+  "eyeColor": "Көзінің түсі",
+  "species": "Түрі",
+  "unknown": "Белгісіз",
+  "films": "Фильмдер",
+
+  "login": "Кіру",
+  "email": "Электрондық пошта",
+  "password": "Құпия сөз",
+  "loggingIn": "Кіріп жатыр...",
+  "signup": "Тіркелу",
+  "noAccount": "Аккаунт жоқ па?",
+  "or": "НЕМЕСЕ",
+  "emailSignIn": "Email арқылы кіру",
+
+  "profileTitle": "Сіздің профиліңіз",
+  "uploading": "Жүктелуде...",
+  "uploadPhoto": "Фото жүктеу",
+  "profileUpdated": "Профиль фотосы жаңартылды!",
+  "profileUploadFailed": "Жүктеу қатесі. Қайта көріңіз.",
+
+  "signingUp": "Тіркелуде...",
+  "repeatPassword": "Құпия сөзді қайталаңыз",
+  "invalidEmail": "Email форматы дұрыс емес",
+  "invalidPassword": "Құпия сөз кемінде 8 таңба, бір цифра және арнайы таңба болуы керек",
+  "passwordsMustMatch": "Құпия сөздер сәйкес келуі керек",
+  "alreadyHaveAccount": "Аккаунт бар ма?",
+  "loading": "Жүктелуде...",
+
+  "Go back": "Артқа",
+
+  "homeIntro": "Сіз білгіңіз келген Star Wars жайлы барлық ақпарат:",
+  "homePeopleFilms": "Кейіпкерлер және олардың қатысқан фильмдері.",
+  "homeSevenFilms": "Star Wars-тың ЖЕТІ фильмінің ішінен",
+
+
+  "search paintings" : "картиналарды іздеу",
+  "all species" : "барлық түрлері",
+
+  "no more": "басқа кейіпкерлер жоқ"
+}
